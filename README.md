@@ -72,3 +72,6 @@ https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html
 
 ### Content Feed Tutorial
 https://www.youtube.com/watch?v=2_yCj2TEFW8
+
+### Write up of set up
+https://medium.com/@srijan.pydev_21998/configure-pycharm-for-python-django-and-introduction-to-django-rest-framework-f9c1a7cb4ba0
