@@ -24,6 +24,6 @@ router = routers.DefaultRouter()
 router.register(r'item', ItemViewSet, base_name='item')
 
 urlpatterns = [
-	url(r'^api/', include(router.urls)),
+    url(r'^api/', include(router.urls)),
     path('admin/', admin.site.urls),
 ]
