@@ -1,11 +1,10 @@
 # Back End Documentation
 
-
 ## Setup
 
 Prereq:
-Python
-Pip
+* Python
+* Pip
 
 Install virtualenv
 https://virtualenv.pypa.io/en/latest/
@@ -15,7 +14,7 @@ https://virtualenvwrapper.readthedocs.io/en/latest/
 
 ### Create Post activate script
 
-Replace my paths with you're paths
+Replace my paths with you're paths<br/>
 vim /Users/garrettlew/.virtualenvs/postactivate
 ```
 #!/bin/bash
@@ -38,6 +37,16 @@ Install django rest framework
 pip install djangorestframework
 ```
 
+## Start Django Server
+
+1. Be in the outer calpolyrides folder
+2. django-admin makemigrations
+3. django-admin migrate
+4. django-admin runserver
+5. Go to http://localhost:8000/api/item/ to view site
+
+If make changes to database items delete the database file that will be create locally: looks like db.sqlite3
+Also delete all 00##_initial.py files in api/migrations/__pycache__
 
 
 
