@@ -6,8 +6,13 @@
 
 .padding {
   width: 100%;
-  border-top: 100px white solid;
-  border-right: 30px white solid;
-  border-left: 30px white solid;
-  border-bottom: 30px white solid;
+  border-bottom: 30px rgb(134, 194, 134) solid;
+  font-size: 250px;
+}
+
+.header {
+  font-size: 50px;
+  border-right: 30px rgb(134, 194, 134) solid;
+  border-left: 30px rgb(134, 194, 134) solid;
+  background: rgb(134, 194, 134);
 }
