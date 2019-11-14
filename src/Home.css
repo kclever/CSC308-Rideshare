@@ -4,3 +4,10 @@
   text-align: center;
 }
 
+.padding {
+  width: 100%;
+  border-top: 100px white solid;
+  border-right: 30px white solid;
+  border-left: 30px white solid;
+  border-bottom: 30px white solid;
+}

@@ -37,7 +37,7 @@ class Home extends Component {
     
 
     return (
-      <div>
+      <div className="padding">
         <Tabs tabBarExtraContent={profileButton} defaultActiveKey="2" type="card">
             <TabPane
               tab={
@@ -60,7 +60,7 @@ class Home extends Component {
               key="2"
             >
               <span>
-              <Card title="San Francisco to SLO" extra={<Icon type="user"/>} style={{ width: 1650 }}>
+              <Card title="San Francisco to SLO" extra={<Icon type="user"/>}>
                     <p>Friday 3/3 @ 4:00PM</p>
                     <p>$20</p>
                     <p> 4 spots left <Icon type="user"/>
