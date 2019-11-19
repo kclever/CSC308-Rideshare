@@ -3,8 +3,8 @@
 ## Setup
 
 Prereq:
-* Python
-* Pip
+* Python 3
+* Pip 3
 
 Install virtualenv
 https://virtualenv.pypa.io/en/latest/
@@ -27,14 +27,15 @@ cd ~/Documents/calpoly/CSC308-Rideshare
 deactivate env and reactivate to check if the script worked
 See if DJANGO_SETTINGS_MODULE and PYTHONPATH environment variable has been set correctly
 
+Use Python3
 Install Django in the virtual environment
 ```
-pip install django
+pip3 install django
 ```
 
 Install django rest framework
 ```
-pip install djangorestframework
+pip3 install djangorestframework
 ```
 
 ## Start Django Server
