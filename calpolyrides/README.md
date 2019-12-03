@@ -14,7 +14,7 @@ https://virtualenvwrapper.readthedocs.io/en/latest/
 
 ### Create Post activate script
 
-Replace my paths with you're paths<br/>
+Replace my paths with your paths<br/>
 vim /Users/garrettlew/.virtualenvs/postactivate
 ```
 #!/bin/bash
@@ -25,6 +25,11 @@ export PYTHONPATH='/Users/garrettlew/Documents/calpoly/CSC308-Rideshare/calpolyr
 cd ~/Documents/calpoly/CSC308-Rideshare
 ```
 deactivate env and reactivate to check if the script worked
+```
+Arthurs-MacBook-Pro:~ arthurknatt$ source env/bin/activate
+(env) Arthurs-MacBook-Pro:~ arthurknatt$ deactivate
+Arthurs-MacBook-Pro:~ arthurknatt$ source env/bin/activate
+```
 See if DJANGO_SETTINGS_MODULE and PYTHONPATH environment variable has been set correctly
 
 Use Python3
