@@ -15,4 +15,17 @@
   border-right: 30px rgb(134, 194, 134) solid;
   border-left: 30px rgb(134, 194, 134) solid;
   background: rgb(134, 194, 134);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.sizing {
+  width: 40%;
+}
+
+.search {
+  width: 93%
+}
+
+.but {
+  justify-content: flex-end;
 }
