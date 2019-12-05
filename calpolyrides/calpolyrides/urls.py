@@ -18,10 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
 
-from api.views import ItemViewSet
+from api.views import ItemViewSet, AccountViewSet
 
 router = routers.DefaultRouter()
 router.register(r'item', ItemViewSet, base_name='item')
+router.register(r'account', AccountViewSet, base_name='account')
 
 urlpatterns = [
     url(r'^api/', include(router.urls)),

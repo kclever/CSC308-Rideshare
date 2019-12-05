@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'djongo',
+    'calpolyrides',
     'rest_framework',
     'api',
 ]
@@ -77,11 +78,16 @@ WSGI_APPLICATION = 'calpolyrides.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'djongo',
+        'NAME': 'PolyRides',
+        'HOST': 'mongodb+srv://:@polyrides-obdgn.mongodb.net/test?retryWrites=true&w=majority',
+        'PORT': 27017,
+        'USER': '',
+        'PASSWORD': '',
+        'AUTH_SOURCE': 'PolyRides',
+        'AUTH_MECHANISM': 'SCRAM-SHA-1',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

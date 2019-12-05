@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from api.models import Item
+from api.models import Item, Account
 
 class ItemSerializer(serializers.ModelSerializer):
 	class Meta:
@@ -8,3 +8,8 @@ class ItemSerializer(serializers.ModelSerializer):
 		fields = ('id', 'name_u', 'from_u', 'to_u', 'when_u', 'seats_u', 'cost_u', 'will_drop_u', 'extra_details_u')
 		# fields = ('id', 'Name', 'From', 'To', 'When')
 		# fields = ('id', 'Title', 'Description')
+
+class AccountSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = Account
+		fields = ('first_u', 'last_u', 'user_u', 'password_u', 'email_u')
