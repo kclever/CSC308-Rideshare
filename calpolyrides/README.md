@@ -54,5 +54,7 @@ pip3 install djangorestframework
 If make changes to database items delete the database file that will be create locally: looks like db.sqlite3
 Also delete all 00##_initial.py files in api/migrations/__pycache__
 
+Using AWS to deploy the app
+https://aws.amazon.com/getting-started/projects/deploy-python-application/
 
 
