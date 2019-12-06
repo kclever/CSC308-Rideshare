@@ -1,9 +1,27 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { Tabs, Icon, Button, Menu, Dropdown, Card, Input, Checkbox } from 'antd';
 import './Home.css';
 
-class Home extends Component {
+class Home extends Component{
+  constructor()
+  {
+      super();
+      this.state = {
+          'items': []
+      }
+  }
+  componentDidMount()
+  {
+      this.getItems();
+  }
 
+  getItems()
+  {
+      fetch('http://localhost:8000/api/item/')
+          .then(results => results.json())
+          .then(results => this.setState({'items': results}));
+  } 
   render() {
     const menu = (
       <Menu>
@@ -121,6 +139,30 @@ class Home extends Component {
               </Button>
               <br />
               <br />
+              <ul>
+                {this.state.items.map(function(item, index)
+                    {
+                        return (
+                            // <div>
+                            //     <h1>{item.from_u} -> {item.to_u}</h1>
+                            //     <p>{item.extra_details_u}</p>
+                            // </div>    
+                            // )
+                            
+                            <Card title=""extra={<Icon type="user"/>}>
+                                <h1>{item.from_u} to {item.to_u}</h1>
+                                <p> {item.when_u}</p>
+                                <p>${item.cost_u}</p>
+                                <p> {item.seats_u} spots left <Icon type="user"/>
+                                <Icon type="user"/>
+                                <Icon type="user"/>
+                                <Icon type="user"/></p>
+                            </Card>
+                        )}
+
+                    )}
+
+            </ul> 
               <Card title="San Francisco to SLO" extra={<Icon type="user"/>}>
                     <p>Friday 3/3 @ 4:00PM</p>
                     <p>$20</p>
@@ -149,6 +191,7 @@ class Home extends Component {
               </span>
             </TabPane>
           </Tabs>
+         
       </div>
       </div>
     );
