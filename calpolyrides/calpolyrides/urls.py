@@ -19,9 +19,11 @@ from django.urls import path
 from rest_framework import routers
 
 from api.views import ItemViewSet
+from api.views import RideRequestPostViewSet
 
 router = routers.DefaultRouter()
 router.register(r'item', ItemViewSet, base_name='item')
+router.register(r'ride_request_post', RideRequestPostViewSet, base_name='ride_request_post')
 
 urlpatterns = [
     url(r'^api/', include(router.urls)),
