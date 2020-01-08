@@ -24,6 +24,23 @@ export DJANGO_SETTINGS_MODULE='calpolyrides.settings'
 export PYTHONPATH='/Users/garrettlew/Documents/calpoly/CSC308-Rideshare/calpolyrides'
 cd ~/Documents/calpoly/CSC308-Rideshare
 ```
+
+To start virtual environment without using the wrapper:
+```
+source /PATH/TO/.virtualenvs/calpolyrides/bin/activate
+```
+
+Example:
+```
+source /Users/garrettlew/.virtualenvs/calpolyrides/bin/activate
+```
+
+Then be sure to set these environment variables:
+```
+export DJANGO_SETTINGS_MODULE='calpolyrides.settings'
+export PYTHONPATH='/PATH/TO/PROJECT/CSC308-Rideshare/
+```
+
 deactivate env and reactivate to check if the script worked
 ```
 Arthurs-MacBook-Pro:~ arthurknatt$ source env/bin/activate
