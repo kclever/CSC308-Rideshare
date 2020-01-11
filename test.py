@@ -2,10 +2,28 @@ import pytest
 
 def greet(name):
    if isinstance(name, list) == True:
-      returnVar = "Hello"
+      shoutNames = []
+      regNames = []
+      quoteNames= []
       for n in name:
-         if (name[len(name) -1] == n):
-            if len(name) == 2:
+         if n.isupper() == True:
+            shoutNames.append(n)
+         else:
+            if "," in n:
+               if "\"" in n:
+                  n = n.replace('"', '')
+                  regNames.append(n)
+               else:
+                  listSplit = n.split(', ')
+                  for l in listSplit:
+                     regNames.append(l)
+            else:
+               regNames.append(n)
+      returnVar = "Hello"
+
+      for n in regNames:
+         if (regNames[len(regNames) -1] == n):
+            if len(regNames) == 2:
                returnVar = returnVar + " and "
             else:
                returnVar = returnVar + ", and "
@@ -13,6 +31,11 @@ def greet(name):
             returnVar = returnVar + ", "
          returnVar = returnVar + n
       returnVar = returnVar + "."
+      if len(shoutNames) > 0:
+         returnVar = returnVar + " AND HELLO "
+         for n in shoutNames:
+            returnVar = returnVar + n
+         returnVar = returnVar + "!"
       return returnVar
    else:
       if len(name) != 0:
@@ -37,3 +60,12 @@ def test_req4():
 
 def test_req5():
    assert greet(["Amy", "Brian", "Charlotte"]) == "Hello, Amy, Brian, and Charlotte."
+
+def test_req6():
+   assert greet(["Amy","BRIAN", "Charlotte"]) == "Hello, Amy and Charlotte. AND HELLO BRIAN!"
+
+def test_req7():
+   assert greet(["Bob", "Charlie, Dianne"]) == "Hello, Bob, Charlie, and Dianne."
+
+def test_req8():
+   assert greet(["Bob", "\"Charlie, Dianne\""]) == "Hello, Bob and Charlie, Dianne."
