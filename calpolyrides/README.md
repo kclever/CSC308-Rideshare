@@ -60,6 +60,11 @@ Install django rest framework
 pip3 install djangorestframework
 ```
 
+Install cors headers
+```
+install django-cors-headers
+```
+
 ## Start Django Server
 
 1. Be in the outer calpolyrides folder
