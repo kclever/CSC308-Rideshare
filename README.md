@@ -91,3 +91,6 @@ https://google.github.io/styleguide/jsguide.html
 
 ### Style guidelines for Python
 https://www.python.org/dev/peps/pep-0008/
+
+### Python Linter
+Pylint - https://www.pylint.org/
