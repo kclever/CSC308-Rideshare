@@ -94,3 +94,6 @@ https://www.python.org/dev/peps/pep-0008/
 
 ### Python Linter
 Pylint - https://www.pylint.org/
+
+### Javascript Linter
+https://github.com/SamVerschueren/clinton
