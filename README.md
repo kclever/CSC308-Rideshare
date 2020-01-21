@@ -85,3 +85,9 @@ https://www.youtube.com/watch?v=2_yCj2TEFW8
 
 ### Write up of set up
 https://medium.com/@srijan.pydev_21998/configure-pycharm-for-python-django-and-introduction-to-django-rest-framework-f9c1a7cb4ba0
+
+### Sytle guidelines for Javascript
+https://google.github.io/styleguide/jsguide.html
+
+### Style guidelines for Python
+https://www.python.org/dev/peps/pep-0008/
