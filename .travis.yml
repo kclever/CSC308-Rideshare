@@ -3,6 +3,5 @@ install:
 - pip3 install django
 - pip3 install djangorestframework
 - pip3 install django-cors-headers
-- pip3 install pytest
 script:
-- pytest
+- pytest calpolyrides/api/tests.py
