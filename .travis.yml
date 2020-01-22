@@ -1,3 +1,5 @@
+before_install:
+- brew install yarn
 language: python3
 install: 
 - pip3 install django
