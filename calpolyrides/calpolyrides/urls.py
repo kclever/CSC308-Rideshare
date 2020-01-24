@@ -20,10 +20,12 @@ from rest_framework import routers
 
 from api.views import ItemViewSet
 from api.views import RideRequestPostViewSet
+from api.views import SearchFilterViewSet
 
 router = routers.DefaultRouter()
 router.register(r'item', ItemViewSet, base_name='item')
 router.register(r'ride_request_post', RideRequestPostViewSet, base_name='ride_request_post')
+router.register(r'search_filter', SearchFilterViewSet, base_name='search_filter')
 
 urlpatterns = [
     url(r'^api/', include(router.urls)),

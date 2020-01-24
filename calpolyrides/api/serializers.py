@@ -2,6 +2,7 @@ from rest_framework import serializers
 
 from api.models import Item
 from api.models import RideRequestPost
+from api.models import SearchFilter
 
 class ItemSerializer(serializers.ModelSerializer):
     class Meta:
@@ -17,3 +18,8 @@ class RideRequestPostSerializer(serializers.ModelSerializer):
         # fields = ('id', 'Name', 'From', 'To', 'When')
         # fields = ('id', 'Title', 'Description')
         fields = ('id', 'name_u', 'from_u', 'to_u', 'when_u', 'extra_details_u')
+
+class SearchFilterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SearchFilter
+        fields = ('id', 'search_filter_u')

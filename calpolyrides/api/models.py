@@ -26,3 +26,9 @@ class RideRequestPost(models.Model):
     # will_drop_u = models.BooleanField(verbose_name="Willing to drop along the way")
     extra_details_u = models.TextField(max_length=500, verbose_name="Extra Details")
 
+class SearchFilter(models.Model):
+    # title = models.CharField(max_length=100, default=0)
+    # description = models.CharField(max_length=100, default=0)
+    search_filter_u = models.CharField(max_length=100, verbose_name="Filter")
+
+
