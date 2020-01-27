@@ -118,6 +118,8 @@
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -130,14 +132,22 @@
         authDomain: "calpolyrideshare-3e5ed.firebaseapp.com",
         databaseURL: "https://calpolyrideshare-3e5ed.firebaseio.com",
         projectId: "calpolyrideshare-3e5ed",
-        storageBucket: "calpolyrideshare-3e5ed.appspot.com",
-        messagingSenderId: "836131646011",
+        /*storageBucket: "calpolyrideshare-3e5ed.appspot.com",*/
+        /*messagingSenderId: "836131646011",*/
         appId: "1:836131646011:web:83b589c736e80a1c0b0a1e",
         measurementId: "G-JPNEYJY8KH"
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
+
+    //make auth and firestore references
+    const auth = firebase.auth()
+    const db = firebase.firestore()
+
+    //update firestore settings do I need??
+    //db.settings({timestampsInSnapshots: true});
+
     </script>
 
     <!-- Compiled and minified JavaScript -->
