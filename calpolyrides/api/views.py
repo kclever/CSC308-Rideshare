@@ -13,6 +13,7 @@ from api.serializers import FilterSerializer
 # Create your views here.
 
 class ItemViewSet(viewsets.ModelViewSet):
+    filter_fields = ('from_u', 'to_u')
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
     #def list(self, request):   inherets this from modelviewset
