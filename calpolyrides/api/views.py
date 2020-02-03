@@ -3,10 +3,12 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 from api.models import Item
 from api.models import RideRequestPost
-from api.models import SearchFilter
+from api.models import Search
+from api.models import Filter
 from api.serializers import ItemSerializer
 from api.serializers import RideRequestPostSerializer
-from api.serializers import SearchFilterSerializer
+from api.serializers import SearchSerializer
+from api.serializers import FilterSerializer
 
 # Create your views here.
 
@@ -19,6 +21,10 @@ class RideRequestPostViewSet(viewsets.ModelViewSet):
     queryset = RideRequestPost.objects.all()
     serializer_class = RideRequestPostSerializer
 
-class SearchFilterViewSet(viewsets.ModelViewSet):
-    queryset = SearchFilter.objects.all()
-    serializer_class = SearchFilterSerializer
+class SearchViewSet(viewsets.ModelViewSet):
+    queryset = Search.objects.all()
+    serializer_class = SearchSerializer
+
+class FilterViewSet(viewsets.ModelViewSet):
+    queryset = Filter.objects.all()
+    serializer_class = FilterSerializer
