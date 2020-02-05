@@ -29,6 +29,6 @@ class Filter(models.Model):
     starting_u = models.CharField(max_length=100, verbose_name="Starting Location", blank=True)
     ending_bool_u = models.BooleanField(verbose_name="Filter for ending location")
     ending_u = models.CharField(max_length=100, verbose_name="Ending_Location", blank=True)
-    
+
 
 

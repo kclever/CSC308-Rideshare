@@ -9,13 +9,25 @@ from api.serializers import ItemSerializer
 from api.serializers import RideRequestPostSerializer
 from api.serializers import SearchSerializer
 from api.serializers import FilterSerializer
+from django_filters import rest_framework as filters
 
 # Create your views here.
 
+class RideOfferPostFilter(filters.FilterSet):
+
+    class Meta:
+        model = Item
+        fields = {
+            'from_u' : ['icontains'],
+            'to_u' : ['icontains'],
+            'when_u' : ['lte', 'gte'],
+            'cost_u' : ['lte'],
+        }
+
 class ItemViewSet(viewsets.ModelViewSet):
-    filter_fields = ('from_u', 'to_u')
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
+    filterset_class = RideOfferPostFilter
     #def list(self, request):   inherets this from modelviewset
 
 class RideRequestPostViewSet(viewsets.ModelViewSet):
