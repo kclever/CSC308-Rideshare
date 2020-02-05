@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.response import Response
-from api.models import Item
+from api.models import RideOfferPost
 from api.models import RideRequestPost
 from api.models import Search
 from api.models import Filter
-from api.serializers import ItemSerializer
+from api.serializers import RideOfferPostSerializer
 from api.serializers import RideRequestPostSerializer
 from api.serializers import SearchSerializer
 from api.serializers import FilterSerializer
@@ -16,7 +16,7 @@ from django_filters import rest_framework as filters
 class RideOfferPostFilter(filters.FilterSet):
 
     class Meta:
-        model = Item
+        model = RideOfferPost
         fields = {
             'from_u' : ['icontains'],
             'to_u' : ['icontains'],
@@ -24,9 +24,9 @@ class RideOfferPostFilter(filters.FilterSet):
             'cost_u' : ['lte'],
         }
 
-class ItemViewSet(viewsets.ModelViewSet):
-    queryset = Item.objects.all()
-    serializer_class = ItemSerializer
+class RideOfferPostViewSet(viewsets.ModelViewSet):
+    queryset = RideOfferPost.objects.all()
+    serializer_class = RideOfferPostSerializer
     filterset_class = RideOfferPostFilter
     #def list(self, request):   inherets this from modelviewset
 
