@@ -14,7 +14,6 @@ from django_filters import rest_framework as filters
 # Create your views here.
 
 class RideOfferPostFilter(filters.FilterSet):
-
     class Meta:
         model = RideOfferPost
         fields = {
@@ -30,9 +29,19 @@ class RideOfferPostViewSet(viewsets.ModelViewSet):
     filterset_class = RideOfferPostFilter
     #def list(self, request):   inherets this from modelviewset
 
+class RideRequestPostFilter(filters.FilterSet):
+    class Meta:
+        model = RideRequestPost
+        fields = {
+            'from_u' : ['icontains'],
+            'to_u' : ['icontains'],
+            'when_u' : ['lte', 'gte'],
+        }
+
 class RideRequestPostViewSet(viewsets.ModelViewSet):
     queryset = RideRequestPost.objects.all()
     serializer_class = RideRequestPostSerializer
+    filterset_class = RideRequestPostFilter
 
 class SearchViewSet(viewsets.ModelViewSet):
     queryset = Search.objects.all()
