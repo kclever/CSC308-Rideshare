@@ -161,32 +161,7 @@ class Home extends Component{
 
                     )}
 
-            </ul> 
-              <Card title="San Francisco to SLO" extra={<Icon type="user"/>}>
-                    <p>Friday 3/3 @ 4:00PM</p>
-                    <p>$20</p>
-                    <p> 4 spots left <Icon type="user"/>
-                    <Icon type="user"/>
-                    <Icon type="user"/>
-                    <Icon type="user"/></p>
-                </Card>
-                <br />
-                <br />
-                <Card title="Los Angeles to SLO" extra={<Icon type="user"/>}>
-                    <p>Saturday 3/4 @ 7:00AM</p>
-                    <p>$20</p>
-                    <p> 1 spot left <Icon type="user"/>
-                    <Icon type="user"/></p>
-                </Card>
-                <br />
-                <br />
-                <Card title="SLO to Alaska" extra={<Icon type="user"/>}>
-                    <p> 3/17 @ 1:00PM</p>
-                    <p>$2000</p>
-                    <p> 3 spots left <Icon type="user"/>
-                    <Icon type="user"/>
-                    <Icon type="user"/></p>
-                </Card>
+            </ul>
               </span>
             </TabPane>
           </Tabs>
