@@ -18,14 +18,14 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
 
-from api.views import RideOfferPostViewSet
-from api.views import RideRequestPostViewSet
+from api.views import RideOfferViewSet
+from api.views import RideSeekViewSet
 from api.views import SearchViewSet
 from api.views import FilterViewSet
 
 router = routers.DefaultRouter()
-router.register(r'ride_offer_post', RideOfferPostViewSet, base_name='ride_offer_post')
-router.register(r'ride_request_post', RideRequestPostViewSet, base_name='ride_request_post')
+router.register(r'ride_offer', RideOfferViewSet, base_name='ride_offer')
+router.register(r'ride_seek', RideSeekViewSet, base_name='ride_seek')
 router.register(r'search', SearchViewSet, base_name='search')
 router.register(r'filter', FilterViewSet, base_name='filter')
 

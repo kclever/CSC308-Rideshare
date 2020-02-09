@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class RideOfferPost(models.Model):
+class RideOffer(models.Model):
     # title = models.CharField(max_length=100, default=0)
     # description = models.CharField(max_length=100, default=0)
     name_u = models.CharField(max_length=100, verbose_name="Name")
@@ -14,7 +14,7 @@ class RideOfferPost(models.Model):
     will_drop_u = models.BooleanField(verbose_name="Willing to drop along the way")
     extra_details_u = models.TextField(max_length=500, verbose_name="Extra Details", blank=True)
 
-class RideRequestPost(models.Model):
+class RideSeek(models.Model):
     name_u = models.CharField(max_length=100, verbose_name="Name")
     from_u = models.CharField(max_length=100, verbose_name="From")
     to_u = models.CharField(max_length=100, verbose_name="To")

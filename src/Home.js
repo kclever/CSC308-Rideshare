@@ -8,19 +8,19 @@ class Home extends Component{
   {
       super();
       this.state = {
-          'items': []
+          'offerings': []
       }
   }
   componentDidMount()
   {
-      this.getItems();
+      this.getOfferings();
   }
 
-  getItems()
+  getOfferings()
   {
-      fetch('http://localhost:8000/api/item/')
+      fetch('http://localhost:8000/api/ride_offer/')
           .then(results => results.json())
-          .then(results => this.setState({'items': results}));
+          .then(results => this.setState({'offerings': results}));
   } 
   render() {
     const menu = (
@@ -139,21 +139,20 @@ class Home extends Component{
               </Button>
               <br />
               <br />
-              <ul>
-                {this.state.items.map(function(item, index)
+            <ul>
+                {this.state.offerings.map(function(offer, index)
                     {
                         return (
                             // <div>
-                            //     <h1>{item.from_u} -> {item.to_u}</h1>
-                            //     <p>{item.extra_details_u}</p>
+                            //     <h1>{offer.from_u} -> {offer.to_u}</h1>
+                            //     <p>{offer.extra_details_u}</p>
                             // </div>    
                             // )
-                            
-                            <Card title=""extra={<Icon type="user"/>}>
-                                <h1>{item.from_u} to {item.to_u}</h1>
-                                <p> {item.when_u}</p>
-                                <p>${item.cost_u}</p>
-                                <p> {item.seats_u} spots left <Icon type="user"/>
+                            <Card title="" extra={<Icon type="user"/>} style={{marginBottom: 20 + 'px'}}>
+                                <h1>{offer.from_u} to {offer.to_u}</h1>
+                                <p> {offer.when_u}</p>
+                                <p> {offer.cost_u}</p>
+                                <p> {offer.seats_u} spots left <Icon type="user"/>
                                 <Icon type="user"/>
                                 <Icon type="user"/>
                                 <Icon type="user"/></p>
